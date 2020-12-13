@@ -10,7 +10,6 @@ pipeline {
         git 'https://github.com/malipramod/jenkins-test'
       }
     }
-     
     stage('Build') {
       steps {
         sh 'npm install'
@@ -18,7 +17,12 @@ pipeline {
     }        
     stage('Test') {
       steps {
-        sh 'npm run jest-test'
+        sh 'npm run test'
+      }
+    }
+    stage('Test Coverage') {
+      steps {
+        sh 'npm run get-coverage'
       }
     }
   }
