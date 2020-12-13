@@ -10,7 +10,7 @@ pipeline {
         git 'https://github.com/malipramod/jenkins-test'
       }
     }
-    stage('Build') {
+    stage('Install') {
       steps {
         sh 'echo "Installing depedency"'
         sh 'npm install'
@@ -19,7 +19,7 @@ pipeline {
     stage('Test') {
       steps {
         sh 'echo "Running tests"'
-        sh 'npm test'
+        sh 'react-scripts test  --watchAll'
       }
     }
     stage('Test Coverage') {
