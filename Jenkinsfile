@@ -17,12 +17,12 @@ pipeline {
     }        
     stage('Test') {
       steps {
-        sh 'npm run test'
+        sh 'npm test'
       }
     }
     stage('Test Coverage') {
       steps {
-        sh 'npm run get-coverage'
+        sh 'npm get-coverage'
       }
     }
   }

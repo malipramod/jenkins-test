@@ -21,8 +21,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "get-coverage": "react-scripts test --coverage",
+    "test": "react-scripts test a",
+    "get-coverage": "react-scripts test --coverage a",
     "eject": "react-scripts eject",
     "jest-test": "jest"
   },
