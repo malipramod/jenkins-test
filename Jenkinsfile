@@ -19,7 +19,7 @@ pipeline {
     stage('Test') {
       steps {
         sh 'echo "Running tests"'
-        sh 'react-scripts test  --watchAll'
+        sh 'npm test'
       }
     }
     stage('Test Coverage') {
