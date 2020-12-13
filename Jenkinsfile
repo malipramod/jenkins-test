@@ -21,7 +21,7 @@ pipeline {
         sh 'echo "Running test coverage report"'
         sh 'npm run test'
       }
-    },
+    }
     stage('Test') {
       steps {
         sh 'echo "Running tests"'
