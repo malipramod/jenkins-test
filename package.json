@@ -29,11 +29,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
     "getCoverage": "react-scripts test --coverage --watchAll",
     "eject": "react-scripts eject",
     "jest-test": "jest",
-    "testC": "jest --coverage"
+    "test": "jest --coverage"
   },
   "eslintConfig": {
     "extends": [
