@@ -22,7 +22,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "getCoverage": "react-scripts test --coverage",
+    "getCoverage": "CI=true react-scripts test --coverage",
     "eject": "react-scripts eject",
     "jest-test": "jest"
   },
