@@ -16,17 +16,17 @@ pipeline {
         sh 'npm install'
       }
     }
+    stage('Test Coverage') {
+      steps {
+        sh 'echo "Running test coverage report"'
+        sh 'npm test'
+      }
+    }
     stage('Test') {
       steps {
         sh 'echo "Running tests"'
         sh 'npm test'
       }
     }  
-    stage('Test Coverage') {
-      steps {
-        sh 'echo "Running test coverage report"'
-        sh 'npm run test'
-      }
-    }
   }
 }
