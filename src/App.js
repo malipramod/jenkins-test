@@ -1,23 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function App({fname,lname,format}) {
+  function welcomeGuest(){
+    console.log('Welcome guest')
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {
+        format === 'fl'? <div data-testid='fl'>{`${fname} ${lname}`}</div>:
+        format === 'lf'? <div data-testid='lf'>{`${lname} ${fname}`}</div>:
+        <div data-testid='default'>{`${fname} ${lname}`}</div>
+      }
+      
+      <button onClick={()=>welcomeGuest()}>Welcome guest</button>
     </div>
   );
 }
