@@ -19,7 +19,7 @@ pipeline {
     stage('Test Coverage') {
       steps {
         sh 'echo "Running test coverage report"'
-        sh 'npm run testC'
+        sh 'npm run test'
       }
     },
     stage('Test') {
