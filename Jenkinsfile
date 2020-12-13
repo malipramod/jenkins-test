@@ -15,12 +15,10 @@ pipeline {
       steps {
         sh 'npm install'
       }
-    }  
-    
-            
+    }        
     stage('Test') {
       steps {
-        sh 'node test'
+        sh 'npm run jest-test'
       }
     }
   }
