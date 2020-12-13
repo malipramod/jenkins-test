@@ -16,16 +16,16 @@ pipeline {
         sh 'npm install'
       }
     }        
-    // stage('Test') {
-    //   steps {
-    //     sh 'echo "Running tests"'
-    //     sh 'npm test'
-    //   }
-    // }
     stage('Test Coverage') {
       steps {
         sh 'echo "Running test coverage report"'
         sh 'npm run testC'
+      }
+    },
+    stage('Test') {
+      steps {
+        sh 'echo "Running tests"'
+        sh 'npm test'
       }
     }
   }
