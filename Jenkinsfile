@@ -25,7 +25,7 @@ pipeline {
     stage('Test Coverage') {
       steps {
         sh 'echo "Running test coverage report"'
-        sh 'npm get-coverage ${testCoverage}'
+        sh 'npm getCoverage ${testCoverage}'
       }
     }
   }
