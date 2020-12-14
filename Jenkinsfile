@@ -16,10 +16,16 @@ pipeline {
         sh 'npm install'
       }
     }
+    stage('Build') {
+      steps {
+        sh 'echo "Building"'
+        sh 'npm run build'
+      }
+    }
     stage('Test Coverage') {
       steps {
         sh 'echo "Running test coverage report"'
-        sh 'npm test ${testCoverage}'
+        sh 'CI=true npm test ${testCoverage}'
       }
     }
     stage('Test') {
